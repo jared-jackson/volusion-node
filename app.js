@@ -27,7 +27,7 @@ app.get('/', function (req, res) {
 //     next();
 // });
 
-http.listen(5000, function() {
+http.listen(3000, function() {
     console.log('HTTP service started.');
 });
 
