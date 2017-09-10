@@ -1,4 +1,8 @@
 angular.module('VolutionApp', [])
+    .config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }])
     .controller('VolutionController', ['$scope', '$http', '$log',
         function ($scope, $http, $log) {
             var api_root = 'https://cqze8l1aq1.execute-api.us-east-1.amazonaws.com/latest';
