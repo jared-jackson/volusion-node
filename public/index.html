@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="VolutionApp">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +17,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
     <script src="https://use.fontawesome.com/a34fa02b8b.js"></script>
 </head>
-
 <body ng-controller="VolutionController">
-
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top" style="height: 50px;">
     <div class="container">
@@ -63,7 +60,6 @@
             <div class="radial" id="container4"></div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-sm-offset-1 col-md-2">
             <div class="progressbar-text"><h3 class="emotion-text">Sadness</h3></div>
@@ -85,30 +81,30 @@
         <div class="col-sm-offset-3 col-md-6 margin">
             <form novalidate>
                 <div class="form-group" class="col-sm-offset-3 col-md-6">
-                    <label for="url_input">Volusion Blog Post URL: <a href="https://www.volusion.com/blog/" target="_blank">Click here to see potential Volusion blogs</a></label>
-                    <input type="text" class="form-control col-md-3" id="url_input" ng-model="consult_url" placeholder="Please enter the URL to a Volusion blog post - Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/">
+                    <label for="url_input">Volusion Blog Post URL: <a href="https://www.volusion.com/blog/"
+                                                                      target="_blank">Click here to see potential
+                        Volusion blogs</a></label>
+                    <input type="text" class="form-control col-md-3" id="url_input" ng-model="consult_url"
+                           placeholder="Please enter the URL to a Volusion blog post - Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/">
                 </div>
-
                 <ul style="display: inline;">
-                    <li><button type="submit" class="btn btn-success btn-lg margin" ng-click="consultWatson()">Submit</button></li>
-                    <li ng-show="loading"><img style="width:200px; height: 200px;" src="https://s3.amazonaws.com/jared-volusion/loading.gif"/> <span>loading..</span></li>
+                    <li>
+                        <button type="submit" class="btn btn-success btn-lg margin" ng-click="consultWatson()">Submit
+                        </button>
+                    </li>
+                    <li ng-show="loading"><img style="width:200px; height: 200px;" src="https://s3.amazonaws.com/jared-volusion/loading.gif"/> <span>loading..</span>
+                    </li>
                 </ul>
-
             </form>
+            <div ng-show="error" style="color: #a91111;">{{error_message}}</div>
         </div>
-
     </div>
-
-
     <!-- /container -->
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/public/scripts/volution.js"></script>
     <script src="/public/scripts/progressbar.js"></script>
-
 </body>
-
 </html>

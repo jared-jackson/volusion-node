@@ -9,6 +9,7 @@ angular.module('VolutionApp', [])
             var api_root = 'https://cqze8l1aq1.execute-api.us-east-1.amazonaws.com/latest';
             $scope.consultWatson = function () {
                 var consult_url = $scope.consult_url;
+                $scope.error = false;
                 $scope.loading = true;
                 $http({
                     method: 'GET',
@@ -28,6 +29,8 @@ angular.module('VolutionApp', [])
                     }
                 }, function errorCallback(response) {
                     $scope.error_message = "";
+                    $scope.loading = false;
+                    $scope.error = true;
                         switch (response.data.errorMessage) {
                             case "invalid request: content is empty":
                                 $scope.error_message = "Please enter the url to a Volusion blog entry. Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/";
