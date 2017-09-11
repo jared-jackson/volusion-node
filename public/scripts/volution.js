@@ -1,4 +1,9 @@
 angular.module('VolutionApp', [])
+    .config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+    ])
     .controller('VolutionController', ['$scope', '$http', '$log',
         function ($scope, $http, $log) {
             var api_root = 'https://cqze8l1aq1.execute-api.us-east-1.amazonaws.com/latest';
@@ -7,6 +12,9 @@ angular.module('VolutionApp', [])
                 $scope.loading = true;
                 $http({
                     method: 'GET',
+                    headers: {
+                        'Content-Type': undefined
+                    },
                     url: api_root + '?url=' + consult_url
                 }).then(function successCallback(response) {
                     var emotion_values = $.map(response.data, function (value) {
