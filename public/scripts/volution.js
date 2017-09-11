@@ -2,8 +2,7 @@ angular.module('VolutionApp', [])
     .config(['$httpProvider', function ($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    }
-    ])
+    }])
     .controller('VolutionController', ['$scope', '$http', '$log',
         function ($scope, $http, $log) {
             var api_root = 'https://cqze8l1aq1.execute-api.us-east-1.amazonaws.com/latest';
@@ -11,6 +10,7 @@ angular.module('VolutionApp', [])
                 var consult_url = $scope.consult_url;
                 $scope.error = false;
                 $scope.loading = true;
+
                 $http({
                     method: 'GET',
                     headers: {
@@ -31,7 +31,7 @@ angular.module('VolutionApp', [])
                     $scope.error_message = "";
                     $scope.loading = false;
                     $scope.error = true;
-                    if(response.data){
+                    if (response.data) {
                         switch (response.data.errorMessage) {
                             case "invalid request: content is empty":
                                 $scope.error_message = "Please enter the url to a Volusion blog entry. Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/";
@@ -42,8 +42,6 @@ angular.module('VolutionApp', [])
                     } else {
                         $scope.error_message = "Please enter a valid Volusion blog post into the input field.";
                     }
-
-
                 });
             };
             $scope.circles = assembleRadials();
@@ -78,7 +76,6 @@ function assembleRadials() {
                 } else {
                     circle.setText(value + "%");
                 }
-
             }
         });
         test.push(bar);
