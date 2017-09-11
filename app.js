@@ -20,17 +20,9 @@ app.get('/', function (req, res) {
     res.sendFile(normalized_path);
 });
 
-
-
-// app.use(function(req, res, next) {
-//     req.db = db;
-//     next();
-// });
-
 http.listen(3000, function() {
     console.log('HTTP service started.');
 });
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,10 +41,8 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
 });
 
-//Keep Program from terminating on exception being thrown
 process.on('uncaughtException', function (err) {
-    console.log(err); //TODO log exceptions being thrown better. This is NOT how you're supposed to do it.
+    console.log(err); //TODO You typically log something with logstash orsomething of the sort
 });
-
 
 module.exports = app;

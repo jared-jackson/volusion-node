@@ -15,3 +15,18 @@
     text-align: center;
     margin-right: 18%;
 }
+.margin {
+    margin-top:50px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}

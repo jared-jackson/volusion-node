@@ -45,8 +45,7 @@
     </div>
 </nav>
 <!-- BODY -->
-<div id="body-container">
-
+<div class="margin">
     <div class="row">
         <div class="col-sm-offset-1 col-md-2">
             <div class="radial" id="container0"></div>
@@ -80,22 +79,27 @@
         </div>
         <div class="col-md-2">
             <div class="progressbar-text"><h3 class="emotion-text">Anger</h3></div>
+        </div>
     </div>
+    <div class="row">
+        <div class="col-sm-offset-3 col-md-6 margin">
+            <form novalidate>
+                <div class="form-group" class="col-sm-offset-3 col-md-6">
+                    <label for="url_input">Volusion Blog Post URL: <a href="https://www.volusion.com/blog/" target="_blank">Click here to see potential Volusion blogs</a></label>
+                    <input type="text" class="form-control col-md-3" id="url_input" ng-model="consult_url" placeholder="Please enter the URL to a Volusion blog post - Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/">
+                </div>
 
+                <ul style="display: inline;">
+                    <li><button type="submit" class="btn btn-success btn-lg margin" ng-click="consultWatson()">Submit</button></li>
+                    <li ng-show="loading"><img style="width:200px; height: 200px;" src="https://s3.amazonaws.com/jared-volusion/loading.gif"/> <span>loading..</span></li>
+                </ul>
 
-        <div class="row">
-            <form novalidate style="margin-top: 500px;">
-                First Name:<br>
-                <input type="text" name="mail" ng-model="consult_url" size="25">
-
-                <br>
-
-                <button ng-click="consultWatson()">Submit</button>
             </form>
         </div>
 
-
     </div>
+
+
     <!-- /container -->
 
     <!-- Bootstrap core JavaScript
