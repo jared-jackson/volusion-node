@@ -1,5 +1,5 @@
 angular.module('VolutionApp', [])
-    .config(['$httpProvider', function($httpProvider) {
+    .config(['$httpProvider', function ($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
     }
@@ -28,12 +28,14 @@ angular.module('VolutionApp', [])
                     }
                 }, function errorCallback(response) {
                     $scope.error_message = "";
-                    switch (response.data.errorMessage) {
-                        case "invalid request: content is empty":
-                            $scope.error_message = "Please enter the url to a Volusion blog entry. Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/";
-                            break;
-                        default:
-                            $scope.error_message = response.data.errorMessage;
+                    if (response.data.errorMessage) {
+                        switch (response.data.errorMessage) {
+                            case "invalid request: content is empty":
+                                $scope.error_message = "Please enter the url to a Volusion blog entry. Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/";
+                                break;
+                            default:
+                                $scope.error_message = response.data.errorMessage;
+                        }
                     }
                 });
             };
