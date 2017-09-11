@@ -1,9 +1,9 @@
-angular.module('VolutionApp', [])
+angular.module('VolusionApp', [])
     .config(['$httpProvider', function ($httpProvider) {
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
     }])
-    .controller('VolutionController', ['$scope', '$http', '$log',
+    .controller('VolusionController', ['$scope', '$http', '$log',
         function ($scope, $http, $log) {
             var api_root = 'https://cqze8l1aq1.execute-api.us-east-1.amazonaws.com/latest';
             $scope.consultWatson = function () {
