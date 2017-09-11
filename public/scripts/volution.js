@@ -13,7 +13,7 @@ angular.module('VolutionApp', [])
                 $http({
                     method: 'GET',
                     headers: {
-                        'Content-Type': undefined
+                        'Content-Type': 'application/json'
                     },
                     url: api_root + '?url=' + consult_url
                 }).then(function successCallback(response) {
