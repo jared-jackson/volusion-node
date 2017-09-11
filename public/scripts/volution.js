@@ -28,7 +28,6 @@ angular.module('VolutionApp', [])
                     }
                 }, function errorCallback(response) {
                     $scope.error_message = "";
-                    if (response.data.errorMessage) {
                         switch (response.data.errorMessage) {
                             case "invalid request: content is empty":
                                 $scope.error_message = "Please enter the url to a Volusion blog entry. Ex: https://www.volusion.com/blog/something-to-be-proud-of-pride-socks/";
@@ -36,7 +35,7 @@ angular.module('VolutionApp', [])
                             default:
                                 $scope.error_message = response.data.errorMessage;
                         }
-                    }
+
                 });
             };
             $scope.circles = assembleRadials();
