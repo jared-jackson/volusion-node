@@ -22,8 +22,8 @@ angular.module('VolusionApp', [])
                         return [value];
                     });
                     if (emotion_values) {
-                        for (var x in emotion_values) {
-                            $scope.circles[x].animate(emotion_values[x]);
+                        for (var emotion in emotion_values) {
+                            $scope.circles[emotion].animate(emotion_values[emotion]);
                         }
                         $scope.loading = false;
                     }
@@ -45,8 +45,8 @@ angular.module('VolusionApp', [])
                 });
             };
             $scope.circles = assembleRadials();
-            for (var x  in $scope.circles) {
-                $scope.circles[x].animate(0.0);
+            for (var circle  in $scope.circles) {
+                $scope.circles[circle].animate(0.0);
             }
         }
     ]);
