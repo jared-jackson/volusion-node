@@ -45,7 +45,7 @@ angular.module('VolusionApp', [])
                 });
             };
             $scope.circles = assembleRadials();
-            for (var x = 0; x < $scope.circles.length; x++) {
+            for (var x  in $scope.circles) {
                 $scope.circles[x].animate(0.0);
             }
         }
@@ -54,7 +54,7 @@ angular.module('VolusionApp', [])
 function assembleRadials() {
     var bar;
     var test = [];
-    for (var x = 0; x <= 4; x++) {
+    for (var x = 0; x <= 4; x++) { // Watson only returns us with 5 emotions. Typically wouldn't hard code a value like this.
         var container = '#container' + x;
         bar = new ProgressBar.Circle(container, {
             color: '#8759f2',

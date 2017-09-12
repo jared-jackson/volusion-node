@@ -24,7 +24,8 @@ those being sadness,joy, fear, disgust, and anger. We then take the JSON values 
 into front end radial graphs with a percentage value of the level of emotion detected.
 
 This code serves as the Node.js server that hosts the dashboard containing the
-user interface / front end code for submitting Volusion blog posts to our Lambda function.
+user interface / front end code for submitting Volusion blog posts to our Lambda function. A bit of work is still required
+to get this dashboard responsive for mobile devices < 1024px; x 1366px;
 
 If for some reason there are issues with opening the dashboard, please get a hold of the recruiter who sent you the project.
 
