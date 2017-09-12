@@ -4,11 +4,11 @@
 
 ## Technologies used
 
-- [Node.js](https://aws.amazon.com/lambda/)
-- [Angular.js](https://aws.amazon.com/api-gateway/)
+- [Node.js](https://nodejs.org/en/)
+- [Angular.js](https://angularjs.org/)
 - [Express.js](https://expressjs.com/)
-- [AWS EC2](https://claudiajs.com/)
-- [AWS S3](https://www.ibm.com/watson/)
+- [AWS EC2](https://aws.amazon.com/ec2/)
+- [AWS S3](https://aws.amazon.com/s3/)
 - [Supertest](https://www.npmjs.com/package/supertest)
 
 # Access the dashboard utilizing this tech here : http://34.232.141.25:3000/
