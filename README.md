@@ -1,6 +1,6 @@
 # Volusion Interview
 
-![alt text](http://ivanjov.com/content/images/2017/01/1-SzOPXTf_YQNtFejG0e4HPg.png)
+![alt text](https://assets.themuse.com/uploaded/companies/919/small_logo.png?v=169d34b9a5db6efad45665f325d849eba2950728cb7f925e90eeee8c067f0c7f)
 
 ## Technologies used
 
@@ -9,7 +9,7 @@
 - [Express.js](https://expressjs.com/)
 - [AWS EC2](https://claudiajs.com/)
 - [AWS S3](https://www.ibm.com/watson/)
-- [Supertest] (https://www.npmjs.com/package/supertest)
+- [Supertest](https://www.npmjs.com/package/supertest)
 
 # Access the dashboard utilizing this tech here : http://34.232.141.25:3000/
 
