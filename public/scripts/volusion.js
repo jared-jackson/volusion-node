@@ -52,11 +52,11 @@ angular.module('VolusionApp', [])
     ]);
 
 function assembleRadials() {
-    var bar;
-    var test = [];
+    var radial;
+    var circles = [];
     for (var x = 0; x <= 4; x++) { // Watson only returns us with 5 emotions. Typically wouldn't hard code a value like this.
         var container = '#container' + x;
-        bar = new ProgressBar.Circle(container, {
+        radial = new ProgressBar.Circle(container, {
             color: '#8759f2',
             strokeWidth: 4,
             trailWidth: 1,
@@ -78,9 +78,9 @@ function assembleRadials() {
                 }
             }
         });
-        test.push(bar);
-        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-        bar.text.style.fontSize = '2rem';
+        circles.push(radial);
+        radial.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+        radial.text.style.fontSize = '2rem';
     }
-    return test;
+    return circles;
 }
