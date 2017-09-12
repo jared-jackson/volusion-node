@@ -40,7 +40,7 @@ angular.module('VolusionApp', [])
                                 $scope.error_message = response.data.errorMessage;
                         }
                     } else {
-                        $scope.error_message = "Please enter a valid Volusion blog post into the input field.";
+                        $scope.error_message = "Something else went wrong with your request. Check to make sure you entered a valid Volusion blog url.";
                     }
                 });
             };
